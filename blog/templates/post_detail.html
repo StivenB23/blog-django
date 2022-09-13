@@ -1,0 +1,16 @@
+{% extends 'layout.html'%}
+{% block content %}
+    {% for post in posts %}
+        <div class="tetx-center">
+            <h1>{{post.title}}</h1>
+            <h3 class="my-2 h5 text-muted">{{ post.date|date:'F jS Y' }}</h3>
+            <img src="{{post.image.url}}" class="img-fluid" >
+            <p>{{ post.description }}</p>
+            <p>Vivamus justo metus, elementum eget lacinia eu, bibendum quis nibh. Nulla dignissim augue id elementum auctor. Aliquam id ex eros. Sed eget interdum nisi. Cras congue ullamcorper lorem, non lobortis enim posuere at. Vivamus quam enim, condimentum et feugiat in, tristique non neque. Mauris convallis ex eu aliquet aliquet. Nullam sed pharetra urna, vitae sagittis ante. Sed convallis mauris vel tempor faucibus. Suspendisse mi felis, accumsan quis odio ut, efficitur commodo nisl. Aliquam erat volutpat. Duis eleifend rhoncus tellus ut viverra. Cras commodo libero et nibh sagittis pellentesque. Suspendisse id venenatis turpis. Donec fringilla lectus tortor, et porta lorem lobortis ut.
+
+                Aliquam elementum elit nec augue mollis semper eget ac elit. Morbi porta ullamcorper arcu quis vulputate. Nam condimentum tempor libero. Nam aliquam eget turpis vel ultricies. Phasellus posuere non mauris sit amet ornare. Nulla feugiat facilisis ultricies. Donec sed sagittis est, iaculis facilisis lorem.
+                
+                Praesent erat magna, vulputate eget ullamcorper in, auctor nec mauris. Phasellus sed felis metus. Donec feugiat finibus purus et tempus. Suspendisse eu enim ex. Etiam egestas ut velit ac fermentum. Sed ac nunc vel ipsum mollis bibendum non sed sem. Donec commodo ultricies odio, nec interdum eros interdum eget. Donec efficitur ipsum consectetur quam ornare, a bibendum nunc rhoncus. Etiam lobortis bibendum nunc nec pharetra. Vestibulum id nibh eleifend, interdum sem sit amet, dictum arcu. Morbi ut diam et felis congue imperdiet at sit amet sapien. Nunc venenatis sed nunc ac vestibulum. Mauris faucibus, turpis in cursus tincidunt, mi mauris volutpat orci, nec laoreet erat lorem pellentesque orci.</p>
+        </div>
+    {% endfor %}
+{% endblock %}

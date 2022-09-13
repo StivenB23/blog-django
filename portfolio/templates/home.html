@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% load static %}
+<header class="row" >
+    <div class="col-md-4 my-auto text-light">
+        <img src="{% static 'portfolio/escritorio.png' %}" width="200" >
+    </div>
+    <div class="col-md-8 my-auto">
+        <h1>INFOBLOG</h1>
+        <p>This is my blog in the what shred information about the development web</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, atque perspiciatis quae voluptatum, eveniet voluptatem laudantium cumque eligendi dolores aliquid debitis, impedit pariatur! Magni provident quae cumque tempore, veritatis earum placeat autem accusamus unde nobis eaque, reiciendis exercitationem commodi itaque totam sit dolore quos dolorem distinctio hic maxime delectus. Voluptate numquam modi ad alias, inventore est at aliquid sapiente laudantium consequatur aspernatur deserunt vero voluptatem? Maxime in beatae blanditiis, sed expedita voluptatum velit qui at culpa. Nobis, quibusdam. Molestias mollitia, molestiae, iste laborum dolor eius nam sed at est suscipit, nostrum in sint harum quibusdam. Doloribus aut quam nihil voluptas.</p>
+    </div>
+</header>
+    <div class="row my-4 text-center">
+        <h1></h1>
+        <p></p>
+        {% for project in projects  %}
+            <div class="col-md-4">
+                <div class="card text-start">
+                    <img class="card-img-top" src="{{project.image.url}}"  >
+                    <div class="card-body">
+                      <h4 class="card-title">{{project.title}}</h4>
+                      <p class="card-text">{{ project.description }}</p>
+                      {% if project.url %}
+                          <a href="{{ project.url }}" >{{ project.url }}</a>
+                      {% endif %}
+                  </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+    
+    
